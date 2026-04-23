@@ -6,6 +6,6 @@ def original_and_clipped(data, row_idx, lo, hi):
     """
     data = np.asarray(data, dtype = np.float64)
     output = data[row_idx].copy()
-    output = output.reshape(1,-1)
+    # output = output.reshape(1,-1)
     output = np.vstack((output, np.clip(output, lo, hi)))
     return output
